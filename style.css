@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======= NAVIGATION MENU HORIZONTAL SCROLL ======= */
+.nav {
+  position: relative;
+}
+.nav-list {
+  position: sticky;
+  top: 0;
+  background: rgba(100, 210, 215, 0.7);
+  z-index: 1000;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem;
+  margin: 0;
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.nav-list::-webkit-scrollbar {
+  display: none;
+}
+.nav-list li {
+  flex: 0 0 auto;
+  margin-right: 1rem;
+}
+.nav-list li:last-child {
+  margin-right: 0;
+}
+.nav-list a {
+  text-decoration: none;
+  color: #004080;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+.nav-list a:hover,
+.nav-list a:focus {
+  color: #001f3f;
+  border-bottom: 2px solid #001f3f;
+  outline: none;
+}
+
+/* ======= RESTE DU CSS EXISTANT ======= */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #4b9cdaa9; 
+  color: #111;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #001f3f;
+  margin-bottom: 0.25rem;
+}
+.subtitle {
+  font-style: italic;
+  color: #004080;
+  letter-spacing: 1px;
+}
+.menu-nav {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.menu-nav a {
+  color: #004080;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+.menu-nav a:hover,
+.menu-nav a:focus {
+  color: #001f3f;
+  border-color: #001f3f;
+  outline: none;
+}
+.menu-nav a.active {
+  color: #001f3f;
+  border-bottom: 2px solid #001f3f;
+  font-weight: bold;
+}
+.category h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #001f3f;
+  border-bottom: 2px solid #004080;
+  padding-bottom: 0.25rem;
+}
+.menu-nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  list-style: none;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+.menu-item {
+  background: rgba(226, 234, 237, 0.458); 
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.08);
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  outline-offset: 3px;
+  margin-bottom: 1rem;
+  color: white; /* default card text color */
+}
+.menu-item:focus,
+.menu-item:hover {
+  box-shadow: 0 6px 14px rgb(0 0 0 / 0.15);
+  outline: 2px solid #004080;
+}
+.menu-summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+}
+.menu-summary img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.12);
+}
+.menu-summary h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+.price {
+  font-weight: 700;
+  color: #ffeb3b; /* Optional: yellow for price contrast on blue */
+  font-size: 1rem;
+}
+.menu-description {
+  padding: 0 1rem 1rem 1rem;
+  font-size: 0.95rem;
+  color: #f0f8ff; /* soft white for readable description */
+  line-height: 1.4;
+  user-select: text;
+}
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid #ccc;
+  color: #555;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .container {
+    max-width: 900px;
+  }
+  .menu-list {
+    gap: 2rem;
+  }
+  .menu-summary img {
+    width: 140px;
+    height: 105px;
+  }
+  .menu-summary h3 {
+    font-size: 1.4rem;
+  }
+  .price {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    max-width: 1100px;
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .menu-item {
+    flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+  }
+}
+.pizza-prices {
+  text-align: center;
+  font-weight: bold;
+}

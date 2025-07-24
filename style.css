@@ -15,7 +15,7 @@
 .nav-list {
   position: sticky;
   top: 0;
-  background: rgba(100, 210, 215, 0.7);
+  background:  rgba(183, 220, 249, 0.663);
   z-index: 1000;
   display: flex;
   overflow-x: auto;
@@ -57,7 +57,7 @@
 /* ======= RESTE DU CSS EXISTANT ======= */
 body {
   font-family: 'Open Sans', sans-serif;
-  background: #4b9cdaa9; 
+  background: rgba(183, 220, 249, 0.663); 
   color: #111;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;

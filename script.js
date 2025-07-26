@@ -1,24 +1,32 @@
-document.querySelectorAll('.menu-item').forEach(item => {
-  item.addEventListener('click', () => {
-    const descId = item.getAttribute('aria-controls');
-    const desc = document.getElementById(descId);
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popup-image");
+  const popupTitle = document.getElementById("popup-title");
+  const popupDesc = document.getElementById("popup-description");
+  const closeBtn = document.querySelector(".popup-close");
 
-    const isExpanded = item.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll(".menu-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const imgSrc = item.querySelector("img")?.src || "";
+      const titleText = item.querySelector("h3")?.textContent || "";
+      const descText = item.querySelector(".menu-description")?.textContent || "";
 
-    // On inverse l'état
-    item.setAttribute('aria-expanded', String(!isExpanded));
-    if (!isExpanded) {
-      desc.removeAttribute('hidden');
-    } else {
-      desc.setAttribute('hidden', '');
-    }
+      popupImg.src = imgSrc;
+      popupTitle.textContent = titleText;
+      popupDesc.textContent = descText;
+
+      popup.classList.remove("hidden");
+    });
   });
 
-  // Support clavier : ouvrir/fermer avec la touche Enter ou Espace
-  item.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault(); // empêcher le scroll avec espace
-      item.click();
+  closeBtn.addEventListener("click", () => {
+    popup.classList.add("hidden");
+  });
+
+  // Fermer la popup en cliquant en dehors de la popup-content
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.classList.add("hidden");
     }
   });
 });

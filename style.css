@@ -57,7 +57,7 @@
 /* ======= RESTE DU CSS EXISTANT ======= */
 body {
   font-family: 'Open Sans', sans-serif;
-  background: rgba(183, 220, 249, 0.663); 
+  background: rgba(214, 231, 243, 0.663); 
   color: #111;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -164,7 +164,7 @@ header h1 {
   font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   margin-bottom: 0.25rem;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .price {
   font-weight: 700;
@@ -174,7 +174,7 @@ header h1 {
 .menu-description {
   padding: 0 1rem 1rem 1rem;
   font-size: 0.95rem;
-  color: #f0f8ff; /* soft white for readable description */
+  color: #000000; /* soft white for readable description */
   line-height: 1.4;
   user-select: text;
 }

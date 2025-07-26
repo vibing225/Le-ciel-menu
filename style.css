@@ -168,7 +168,7 @@ header h1 {
 }
 .price {
   font-weight: 700;
-  color: #ffeb3b; /* Optional: yellow for price contrast on blue */
+  color: #000000; /* Optional: yellow for price contrast on blue */
   font-size: 1rem;
 }
 .menu-description {
@@ -225,4 +225,5 @@ footer {
 .pizza-prices {
   text-align: center;
   font-weight: bold;
+  color: rgb(0, 0, 0);
 }

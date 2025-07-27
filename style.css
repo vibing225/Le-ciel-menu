@@ -280,3 +280,139 @@ footer {
   font-size: 24px;
   cursor: pointer;
 }
+
+/*Badge for Signature*/
+.signature-highlight {
+  position: relative;
+  background: gold;
+  animation: pulse-card 2s infinite;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.signature-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: crimson;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  z-index: 2;
+}
+
+/* Animation pour la carte entière */
+@keyframes pulse-card {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 215, 0, 1);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    transform: scale(1);
+  }
+}
+
+/*Promos*/
+/* Styles pour la section promotions */
+#promotions {
+  background-color: #e0f7fa; /* Bleu clair doux */
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#promotions h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #004080;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.promotion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.promotion-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.promotion-item h3 {
+  font-family: 'Playfair Display', serif;
+  color: #00796b;
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+}
+
+.promotion-item p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.promotion-item ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+.promotion-item ul li {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.promotion-item {
+  position: relative;
+  background: #60e0ee91;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.08);
+  overflow: hidden;
+}
+
+/* Badge promo */
+.promotion-item::after {
+  content: "SPÉCIAL !";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(45deg, #963b0a, #ff8800);
+  color: #111;
+  font-size: 0.90rem;
+  font-weight: bolder;
+  padding: 5px 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(255, 165, 0, 0.6);
+  transform: rotate(10deg);
+  z-index: 10;
+  animation: shine 3s infinite ease-in-out;
+}
+
+/* Animation de brillance douce */
+@keyframes shine {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 165, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 1);
+  }
+}

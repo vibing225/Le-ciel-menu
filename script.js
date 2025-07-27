@@ -1,3 +1,4 @@
+//fenetre popup
 document.addEventListener("DOMContentLoaded", function () {
   const popup = document.getElementById("popup");
   const popupImg = document.getElementById("popup-image");
